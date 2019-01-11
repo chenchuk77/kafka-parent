@@ -6,7 +6,7 @@ setup-zoo:
 	@docker-compose up -d zoo1 zoo2 zoo3
 
 up: setup-zoo
-	@echo '=== Sleeping for 8s while Zookeeper initialises ===' && sleep 8
+	@echo '=== Sleeping for 15s while Zookeeper initialises ===' && sleep 15
 	-docker-compose up
 	@docker-compose down
 

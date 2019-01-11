@@ -1,7 +1,9 @@
+# kafka ver 2.11-0.9.0.1
+
 version: '2'
 services:
   kafka1:
-    image: wurstmeister/kafka
+    image: wurstmeister/kafka:2.11-0.9.0.1
     depends_on:
       - zoo1
       - zoo2
@@ -16,10 +18,11 @@ services:
       KAFKA_ADVERTISED_PORT: 9092
       KAFKA_LOG_RETENTION_HOURS: "168"
       KAFKA_LOG_RETENTION_BYTES: "100000000"
+      KAFKA_ZOOKEEPER_CONNECTION_TIMEOUT_MS: "10000"
       KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2181,zoo3:2181
 
   kafka2:
-    image: wurstmeister/kafka
+    image: wurstmeister/kafka:2.11-0.9.0.1
     depends_on:
       - zoo1
       - zoo2
@@ -33,10 +36,11 @@ services:
       KAFKA_ADVERTISED_PORT: 9093
       KAFKA_LOG_RETENTION_HOURS: "168"
       KAFKA_LOG_RETENTION_BYTES: "100000000"
+      KAFKA_ZOOKEEPER_CONNECTION_TIMEOUT_MS: "10000"
       KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2181,zoo3:2181
 
   kafka3:
-    image: wurstmeister/kafka
+    image: wurstmeister/kafka:2.11-0.9.0.1
     depends_on:
       - zoo1
       - zoo2
@@ -50,12 +54,14 @@ services:
       KAFKA_ADVERTISED_PORT: 9094
       KAFKA_LOG_RETENTION_HOURS: "168"
       KAFKA_LOG_RETENTION_BYTES: "100000000"
+      KAFKA_ZOOKEEPER_CONNECTION_TIMEOUT_MS: "10000"
       KAFKA_ZOOKEEPER_CONNECT:  zoo1:2181,zoo2:2181,zoo3:2181
 
   zoo1:
     image: elevy/zookeeper:latest
     environment:
       MYID: 1
+      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
       SERVERS: zoo1,zoo2,zoo3
     ports:
       - "2181:2181"
@@ -66,6 +72,7 @@ services:
     image: elevy/zookeeper:latest
     environment:
       MYID: 2
+      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
       SERVERS: zoo1,zoo2,zoo3
     ports:
       - "2182:2181"
@@ -76,6 +83,7 @@ services:
     image: elevy/zookeeper:latest
     environment:
       MYID: 3
+      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
       SERVERS: zoo1,zoo2,zoo3
     ports:
       - "2183:2181"

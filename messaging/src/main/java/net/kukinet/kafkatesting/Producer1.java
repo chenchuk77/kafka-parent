@@ -12,7 +12,7 @@ public class Producer1 {
 
     private static Logger logger = LoggerFactory.getLogger(Producer1.class);
 
-    private static final String TOPIC = "topic3";
+    private static final String TOPIC = "topic3p";
     private static final int NUM_OF_MESSAGES = 30;
     private static final int DELAY_SECONDS = 3;
 
