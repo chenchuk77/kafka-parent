@@ -46,6 +46,17 @@ function kafka-describe-consumer-groups {
         done
     fi
 }
+function kafka-describe-topic {
+    if [[ -z "$1" ]] ; then
+        echo "usage: kafka-describe-topic {name}"
+        return
+    fi
+    docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
+       /bin/bash -c "
+           /opt/kafka/bin/kafka-topics.sh --describe --zookeeper \$KAFKA_ZOOKEEPER_CONNECT \
+               --topic $1"
+}
+
 
 function kafka-create-topic {
     if [[ -z "$1" ]] || [[ -z "$2" ]] || [[ -z "$3" ]] ; then
@@ -56,4 +67,15 @@ function kafka-create-topic {
        /bin/bash -c "
            /opt/kafka/bin/kafka-topics.sh --create --zookeeper \$KAFKA_ZOOKEEPER_CONNECT \
                --topic $1 --replication-factor $2 --partitions $3"
+}
+
+function kafka-set-partitions {
+    if [[ -z "$1" ]] || [[ -z "$2" ]]; then
+        echo "usage: kafka-set-partitions {name} {partitions}"
+        return
+    fi
+    docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
+       /bin/bash -c "
+           /opt/kafka/bin/kafka-topics.sh --alter --zookeeper \$KAFKA_ZOOKEEPER_CONNECT \
+               --topic $1 --partitions $2"
 }

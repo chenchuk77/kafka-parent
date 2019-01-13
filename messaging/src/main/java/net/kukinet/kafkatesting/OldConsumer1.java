@@ -22,7 +22,8 @@ public class OldConsumer1 {
     private static final String ZOOKEEPER = "localhost:2181";
     private static final String GROUP_ID = "oldgroup";
 //    private static final String TOPIC = "rating-mq-sanity-system";
-    private static final String TOPIC = "topic3p";
+//private static final String TOPIC = "topic3p";
+    private static final String TOPIC = "single";
     private static final int NUM_THREADS =3;
 
     private final ConsumerConnector consumer;
