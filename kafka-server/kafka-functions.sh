@@ -27,15 +27,32 @@ docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
 
 function kafka-list-consumer-groups {
 docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
-   /bin/bash -c "/opt/kafka/bin/kafka-consumer-groups.sh --list --zookeeper \$KAFKA_ZOOKEEPER_CONNECT"
+   /bin/bash -c "/opt/kafka/bin/kafka-consumer-groups.sh --list --zookeeper \$KAFKA_ZOOKEEPER_CONNECT" || \
+    { echo "command failed providing --zookeeper arg, trying --bootstrap-server..."
+        docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
+           /bin/bash -c "/opt/kafka/bin/kafka-consumer-groups.sh --list --bootstrap-server localhost:9092"
+    }
 }
 
 function kafka-describe-consumer-groups {
     # if cgroup supplied
+    cgroup=$1
+    docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
+       /bin/bash -c "/opt/kafka/bin/kafka-consumer-groups.sh --describe --group ${cgroup} --bootstrap-server localhost:9092"
+}
+
+
+function kafka-describe-mult-consumer-groups {
+    # if cgroup supplied
     if [[ ! -z "$1" ]]; then
         cgroup=$1
         docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
-           /bin/bash -c "/opt/kafka/bin/kafka-consumer-groups.sh --describe --group ${cgroup} --zookeeper \$KAFKA_ZOOKEEPER_CONNECT"
+           /bin/bash -c "/opt/kafka/bin/kafka-consumer-groups.sh --describe --group ${cgroup} --zookeeper \$KAFKA_ZOOKEEPER_CONNECT" || \
+    { echo "command failed providing --zookeeper arg, trying --bootstrap-server..."
+        docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
+           /bin/bash -c "/opt/kafka/bin/kafka-consumer-groups.sh --describe --group ${cgroup} --bootstrap-server localhost:9092"
+    }
+
    # if none provided, loop all TODO: fix error when invoke with no params
     else
         for cgroup in $(kafka-list-consumer-groups); do

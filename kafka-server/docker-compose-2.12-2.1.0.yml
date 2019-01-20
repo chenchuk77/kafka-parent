@@ -59,7 +59,8 @@ services:
     image: elevy/zookeeper:latest
     environment:
       MYID: 1
-      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
+      ZOO_MAX_CLIENT_CNXNS: 1000 #unlimited
+#      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
       SERVERS: zoo1,zoo2,zoo3
     ports:
       - "2181:2181"
@@ -70,7 +71,8 @@ services:
     image: elevy/zookeeper:latest
     environment:
       MYID: 2
-      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
+      ZOO_MAX_CLIENT_CNXNS: 1000 #unlimited
+#      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
       SERVERS: zoo1,zoo2,zoo3
     ports:
       - "2182:2181"
@@ -81,7 +83,8 @@ services:
     image: elevy/zookeeper:latest
     environment:
       MYID: 3
-      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
+      ZOO_MAX_CLIENT_CNXNS: 1000 #unlimited
+#      ZOO_MAX_CLIENT_CNXNS: 0 #unlimited
       SERVERS: zoo1,zoo2,zoo3
     ports:
       - "2183:2181"
