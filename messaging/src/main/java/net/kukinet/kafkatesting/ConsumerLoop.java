@@ -4,6 +4,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.errors.WakeupException;
+import org.apache.kafka.common.serialization.ByteArrayDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,8 +29,10 @@ public class ConsumerLoop implements Runnable {
         Properties props = new Properties();
         props.put("bootstrap.servers", "localhost:9092");
         props.put("group.id", groupId);
-        props.put("key.deserializer", StringDeserializer.class.getName());
-        props.put("value.deserializer", StringDeserializer.class.getName());
+//        props.put("key.deserializer", StringDeserializer.class.getName());
+//        props.put("value.deserializer", StringDeserializer.class.getName());
+        props.put("key.deserializer", ByteArrayDeserializer.class.getName());
+        props.put("value.deserializer", ByteArrayDeserializer.class.getName());
         this.consumer = new KafkaConsumer<>(props);
     }
 
@@ -44,6 +47,7 @@ public class ConsumerLoop implements Runnable {
                 logger.warn("consumer-{} got {} records.", this.id, records.count());
                 for (ConsumerRecord<String, String> record : records) {
                     Map<String, Object> data = new HashMap<>();
+                    data.put("topic", record.topic());
                     data.put("partition", record.partition());
                     data.put("offset", record.offset());
                     data.put("value", record.value());

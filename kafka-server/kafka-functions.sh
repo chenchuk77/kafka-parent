@@ -96,3 +96,13 @@ function kafka-set-partitions {
            /opt/kafka/bin/kafka-topics.sh --alter --zookeeper \$KAFKA_ZOOKEEPER_CONNECT \
                --topic $1 --partitions $2"
 }
+
+function kafka-logs  {
+    if [[ -z "$1" ]]; then
+        echo "usage: kafka-logs {component}"
+        echo "ie: kafka-logs zoo1_1"
+        return
+    fi
+    tail -f kafka-cluster-logs.log | grep -i $1
+
+}

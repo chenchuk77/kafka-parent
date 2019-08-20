@@ -61,6 +61,12 @@
       <version>0.9.0.0</version>
     </dependency>
 
+    <!--for list clients using zookeeper client / 0.9-->
+    <dependency>
+      <groupId>com.101tec</groupId>
+      <artifactId>zkclient</artifactId>
+      <version>0.9</version>
+    </dependency>
 
   </dependencies>
 

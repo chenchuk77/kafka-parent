@@ -1,3 +1,5 @@
+# kafka ver 2.12-2.1.0
+
 version: '2'
 services:
   kafka1:
@@ -12,7 +14,7 @@ services:
       KAFKA_LOG_DIRS: /kafka
       KAFKA_BROKER_ID: 1
       KAFKA_CREATE_TOPICS: test-topic-1:1:2,test-topic-2:1:2,test-topic-3:1:2
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.2.57
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.2.39
       KAFKA_ADVERTISED_PORT: 9092
       KAFKA_LOG_RETENTION_HOURS: "168"
       KAFKA_LOG_RETENTION_BYTES: "100000000"
@@ -30,7 +32,7 @@ services:
     environment:
       KAFKA_LOG_DIRS: /kafka
       KAFKA_BROKER_ID: 2
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.2.57
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.2.39
       KAFKA_ADVERTISED_PORT: 9093
       KAFKA_LOG_RETENTION_HOURS: "168"
       KAFKA_LOG_RETENTION_BYTES: "100000000"
@@ -48,7 +50,7 @@ services:
     environment:
       KAFKA_LOG_DIRS: /kafka
       KAFKA_BROKER_ID: 3
-      KAFKA_ADVERTISED_HOST_NAME: 192.168.2.57
+      KAFKA_ADVERTISED_HOST_NAME: 192.168.2.39
       KAFKA_ADVERTISED_PORT: 9094
       KAFKA_LOG_RETENTION_HOURS: "168"
       KAFKA_LOG_RETENTION_BYTES: "100000000"
@@ -76,6 +78,7 @@ services:
       SERVERS: zoo1,zoo2,zoo3
     ports:
       - "2182:2181"
+      -
       - "2888"
       - "3888"
 
