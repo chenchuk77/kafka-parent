@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5339b8c-9beb-4fdf-8304-ad01126f4a9a" name="Default" comment="1. refactor producer. now can send multiple batches of messages&#10;2. adding bash function to interact with kafka easily (inside docker containers)&#10;3">
-      <change afterPath="$PROJECT_DIR$/kafka-server/start-kafka-cluster.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_101tec_zkclient_0_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_5_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-parent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-server/docker-compose-2.11-0.9.0.1.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-server/docker-compose-2.11-0.9.0.1.yml" afterDir="false" />
+    <list default="true" id="b5339b8c-9beb-4fdf-8304-ad01126f4a9a" name="Default" comment="1. commit all files  in workspace">
+      <change afterPath="$PROJECT_DIR$/kafka-server/zoo-unlimited/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-server/zoo-unlimited/UNUSED/dd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-server/zoo-unlimited/UNUSED/zoo.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-server/zoo-unlimited/bin/zkReady.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-server/zoo-unlimited/conf/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-server/zoo-unlimited/conf/zoo.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-server/zoo-unlimited/entrypoint.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kafka-server/zoo-unlimited/howto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kafka-server/docker-compose-2.12-2.1.0.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-server/docker-compose-2.12-2.1.0.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kafka-server/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-server/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kafka-server/kafka-functions.sh" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-server/kafka-functions.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/messaging.iml" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/messaging.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/Consumer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/Consumer1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/ConsumerLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/ConsumerLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/ZooKeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/ZooKeeper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/kafkatutorials/ConsumerLoop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/kafkatutorials/Driver$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/kafkatutorials/Driver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/messaging/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/messaging/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/messaging/MessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/messaging/MessageListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/messaging/ProducerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/messaging/target/classes/net/kukinet/messaging/ProducerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/producer/target/" />
     <ignored path="$PROJECT_DIR$/consumer/target/" />
@@ -47,15 +31,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/ConsumerLoop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kafka-server/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,11 +58,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kafka-server/bkp-docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
               <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/messaging/target/classes/net/kukinet/messaging/Application.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#452#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3322">
+              <caret line="154" selection-start-line="154" selection-end-line="154" />
             </state>
           </provider>
         </entry>
@@ -197,7 +192,6 @@
         <option value="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/OldConsumer1.java" />
         <option value="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/Producer1.java" />
         <option value="$PROJECT_DIR$/kafka-server/HOWTO.md" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/ZooKeeper.java" />
         <option value="$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/ConsumerLoop.java" />
@@ -205,8 +199,9 @@
         <option value="$PROJECT_DIR$/kafka-server/log.log" />
         <option value="$PROJECT_DIR$/kafka-server/docker-compose-2.12-2.1.0.yml" />
         <option value="$PROJECT_DIR$/kafka-server/start-kafka-cluster.sh" />
-        <option value="$PROJECT_DIR$/kafka-server/kafka-functions.sh" />
         <option value="$PROJECT_DIR$/kafka-server/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/kafka-server/kafka-functions.sh" />
       </list>
     </option>
   </component>
@@ -297,6 +292,46 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kukinet" type="462c0819:PsiDirectoryNode" />
               <item name="kafkatesting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kafka-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kafka-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="messaging" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kafka-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kafka-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="messaging" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kafka-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kafka-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="messaging" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kafka-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kafka-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="messaging" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="kukinet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kafka-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kafka-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="messaging" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="kukinet" type="462c0819:PsiDirectoryNode" />
+              <item name="messaging" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kafka-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -727,7 +762,7 @@
       <workItem from="1565178562525" duration="2116000" />
       <workItem from="1565331513601" duration="594000" />
       <workItem from="1565776642542" duration="581000" />
-      <workItem from="1566219730301" duration="596000" />
+      <workItem from="1566219730301" duration="880000" />
     </task>
     <task id="LOCAL-00001" summary="adding gitignore">
       <created>1547188712923</created>
@@ -750,11 +785,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547244564070</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1. fix gitignore">
+      <created>1566279718095</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566279718095</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1. commit all files  in workspace">
+      <created>1566279842552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566279842552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167265000" />
+    <option name="totallyTimeSpent" value="167549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -768,7 +817,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42114002" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.42114002" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Nl-Palette" order="2" />
       <window_info id="Designer" order="3" />
@@ -789,10 +838,10 @@
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.5399568" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.52051836" />
       <window_info anchor="bottom" id="Spring" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="15" weight="0.3236607" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="15" visible="true" weight="0.70302373" />
       <window_info anchor="right" id="Maven" order="0" weight="0.3299262" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -817,23 +866,15 @@
     <MESSAGE value="adding gitignore" />
     <MESSAGE value="1. increase zk_max_timeout&#10;2. set zk_max_conn to unlimited (both kafka 2.1 and 0.9)&#10;3. set templates of kafka21 and kafka09 to override docker-compose.yml before deploy kafka&#10;4. increase delay in makefile 8-&gt;15 for zk&#10;5. add old-consumer (0.9)&#10;6. adding 2 old dependencies&#10;7. change producer1 topic for old-consumer testing&#10;" />
     <MESSAGE value="1. refactor producer. now can send multiple batches of messages&#10;2. adding bash function to interact with kafka easily (inside docker containers)&#10;3. add indentation in OldConsumer (multi-threaded) so each thread is pretty printed&#10;4. change kafka libraries log-level to WARN so now only app logs appears" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. refactor producer. now can send multiple batches of messages&#10;2. adding bash function to interact with kafka easily (inside docker containers)&#10;3. add indentation in OldConsumer (multi-threaded) so each thread is pretty printed&#10;4. change kafka libraries log-level to WARN so now only app logs appears" />
+    <MESSAGE value="1. fix gitignore" />
+    <MESSAGE value="1. commit all files  in workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. commit all files  in workspace" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/messaging/src/main/java/net/kukinet/messaging/KafkaConsumerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding>
-            <element signature="e#811#833#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/messaging/src/main/java/net/kukinet/messaging/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -949,13 +990,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kafka-server/HOWTO.md" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/101tec/zkclient/0.9/zkclient-0.9.jar!/org/I0Itec/zkclient/ZkClient.class" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.10/0.9.0.0/kafka_2.10-0.9.0.0-sources.jar!/kafka/utils/ZkUtils.scala" />
     <entry file="file://$PROJECT_DIR$/messaging/src/main/java/net/kukinet/kafkatesting/Consumer2.java">
@@ -1083,6 +1117,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/messaging/target/classes/net/kukinet/messaging/Application.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3322">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
         </state>
       </provider>
     </entry>

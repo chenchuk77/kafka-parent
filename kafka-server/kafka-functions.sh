@@ -106,3 +106,4 @@ function kafka-logs  {
     tail -f kafka-cluster-logs.log | grep -i $1
 
 }
+
