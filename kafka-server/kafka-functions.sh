@@ -74,6 +74,18 @@ function kafka-describe-topic {
                --topic $1"
 }
 
+function kafka-remove-topic {
+    if [[ -z "$1" ]] ; then
+        echo "usage: kafka-remove-topic {name}"
+        return
+    fi
+    docker exec -ti $(docker ps |  grep kafka1_1 | awk '{print $1}') \
+       /bin/bash -c "
+           /opt/kafka/bin/kafka-topics.sh --delete --zookeeper \$KAFKA_ZOOKEEPER_CONNECT \
+               --topic $1"
+}
+
+
 
 function kafka-create-topic {
     if [[ -z "$1" ]] || [[ -z "$2" ]] || [[ -z "$3" ]] ; then
